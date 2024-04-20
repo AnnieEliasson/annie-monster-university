@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "firstName": "Grogrok",
+    "lastNamn": "Shadowspike",
+    "program": "Mörk Magi och Mystik",
+    "appearance": {
+      "eyes": 3,
+      "tentacles": 6,
+      "color": "Mörkgrön",
+      "skin": "Taggig, mörkgrå hud",
+      "horn": {
+        "hasHorn": true,
+        "description": "Två stora horn på huvudet"
+      }
+    },
+    "hobbies": ["Mörka ceremonier", "Skattsökning i förlorade tempel"],
+    "homeTown": "Skuggviken"
+  },
+  {
+    "id": 2,
+    "firstName": "Xyrrath",
+    "lastNamn": "Bloodclaw",
+    "program": "Mörk Magi och Mystik",
+    "appearance": {
+      "eyes": 2,
+      "tentacles": 10,
+      "color": "Blodröd",
+      "skin": "Skinnande, svart hud",
+      "horn": {
+        "hasHorn": true,
+        "description": "Långa, krokiga horn"
+      }
+    },
+    "hobbies": ["Stridsträning", "Samla troféer från besegrade fiender"],
+    "homeTown": "Blodbergen"
+  },
+  {
+    "id": 3,
+    "firstName": "Zaldrax",
+    "lastNamn": "Frostgaze",
+    "program": "Monsterbiologi och Ekologi",
+    "appearance": {
+      "eyes": 4,
+      "tentacles": 8,
+      "color": "Isblå",
+      "skin": "Fjällig, vit päls",
+      "horn": {
+        "hasHorn": true,
+        "description": "Isiga horn som liknar istappar"
+      }
+    },
+    "hobbies": ["Isfiske", "Utforskning av frusna grottor"],
+    "homeTown": "Frostholt"
+  },
+  {
+    "id": 4,
+    "firstName": "Thalassa",
+    "lastNamn": "Coralwhisper",
+    "program": "Monsterbiologi och Ekologi",
+    "appearance": {
+      "eyes": 2,
+      "tentacles": 8,
+      "color": "Havsgön",
+      "skin": "Glänsande, blågrön fjällig hud",
+      "horn": {
+        "hasHorn": true,
+        "description": "Krökta horn som påminner om sjögräs"
+      }
+    },
+    "hobbies": ["Utforska undervattensgrottor", "Bevara havets skatter"],
+    "homeTown": "Havsskummet"
+  },
+  {
+    "id": 5,
+    "firstName": "Lyra",
+    "lastNamn": "Sunburst",
+    "program": "Mystiska Konstformer och Kreativitet",
+    "appearance": {
+      "eyes": 6,
+      "tentacles": 4,
+      "color": "Solgul",
+      "skin": "Lysande, orange fjäderdräkt",
+      "horn": {
+        "hasHorn": true,
+        "description": "Små, gyllene horn på huvudet"
+      }
+    },
+    "hobbies": ["Utforska soliga slätter", "Samla solkristaller"],
+    "homeTown": "Solglänta"
+  },
+  {
+    "id": 6,
+    "firstName": "Draxxus",
+    "lastNamn": "Voidgazer",
+    "program": "Mystiska Konstformer och Kreativitet",
+    "appearance": {
+      "eyes": 5,
+      "tentacles": 8,
+      "color": "Mörk lila",
+      "skin": "Glänsande, svart hud",
+      "horn": {
+        "hasHorn": true,
+        "description": "Spetsiga horn som sträcker sig bakåt"
+      }
+    },
+    "hobbies": ["Studera stjärnfall", "Mystiska fenomen"],
+    "homeTown": "Skymningsvalv"
+  },
+  {
+    "id": 7,
+    "firstName": "Stormdrake",
+    "lastNamn": "Skywing",
+    "program": "Luftfart och Flygteknik",
+    "appearance": {
+      "eyes": 2,
+      "tentacles": 0,
+      "color": "Skymningblå",
+      "skin": "Glänsande, blå fjällig hud",
+      "horn": {
+        "hasHorn": true,
+        "description": "Långa, smala horn"
+      }
+    },
+    "hobbies": ["Höga flygningar", "utforska molnformationer"],
+    "homeTown": "Vindfästet"
+  },
+  {
+    "id": 8,
+    "firstName": "Aerion",
+    "lastNamn": "Galewind",
+    "program": "Luftfart och Flygteknik",
+    "appearance": {
+      "eyes": 4,
+      "tentacles": 0,
+      "color": "Molnig grå",
+      "skin": "Fluffig, ljusgrå fjäderdräkt",
+      "horn": {
+        "hasHorn": false,
+        "description": "Har inga horn"
+      }
+    },
+    "hobbies": ["Meteorologi", "Utveckla snabba flygande farkoster"],
+    "homeTown": "Luftfästet"
+  },
+  {
+    "id": 9,
+    "firstName": "Sphinx",
+    "lastNamn": "Whisperfang",
+    "program": "Monsterpsykologi och Kommunikation",
+    "appearance": {
+      "eyes": 4,
+      "tentacles": 2,
+      "color": "Sandgul",
+      "skin": "Mjuk, gul päls",
+      "horn": {
+        "hasHorn": true,
+        "description": "Krökta horn som liknar egyptiska hieroglyfer"
+      }
+    },
+    "hobbies": ["Studerar gärna människans historia och gåtor"],
+    "homeTown": "Giza"
+  },
+  {
+    "id": 10,
+    "firstName": "Gnarkle",
+    "lastNamn": "Fangwhisper",
+    "program": "Monsterpsykologi och Kommunikation",
+    "appearance": {
+      "eyes": 2,
+      "tentacles": 4,
+      "color": "Skogsgrön",
+      "skin": "Tjock, mörkgrön hud",
+      "horn": {
+        "hasHorn": false,
+        "description": "Har inga horn"
+      }
+    },
+    "hobbies": [
+      "Kommunikation och interaktion med andra monsterarter och människor."
+    ],
+    "homeTown": "Sylvanholt"
+  },
+  {
+    "id": 11,
+    "firstName": "Glimmerwing",
+    "lastNamn": "Frostbite",
+    "program": "Monstervård och Läkekonst",
+    "appearance": {
+      "eyes": 4,
+      "tentacles": 12,
+      "color": "Isblå",
+      "skin": "Kristalliserad snö",
+      "horn": {
+        "hasHorn": true,
+        "description": "Långa, spetsiga iskristallshorn"
+      }
+    },
+    "hobbies": [
+      "Flyga högt över snötäckta bergstoppar",
+      "Samla sällsynta fjärilar"
+    ],
+    "homeTown": "Glaciärbyn"
+  },
+  {
+    "id": 12,
+    "firstName": "Surescale",
+    "lastNamn": "Ironhide",
+    "program": "Monstervård och Läkekonst",
+    "appearance": {
+      "eyes": 3,
+      "tentacles": 8,
+      "color": "Rostig brun",
+      "skin": "Tjock, rustningliknande hud",
+      "horn": {
+        "hasHorn": true,
+        "description": "Kluvna horn av järn"
+      }
+    },
+    "hobbies": ["Monstervård och skötsel av sjuka och skadade monster"],
+    "homeTown": "Metallbergen"
+  }
+]
