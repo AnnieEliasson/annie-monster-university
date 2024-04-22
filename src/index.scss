@@ -37,98 +37,99 @@ nav {
 
 main {
   display: flex;
+}
+.sidebar {
+  width: fit-content;
+  padding: 20px;
+  border: 0px solid black;
 
-  .sidebar {
-    width: 400px;
-    padding: 20px;
+  ul {
+    list-style: none;
 
-    ul {
-      list-style: none;
-
-      li {
-        border-bottom: 1px solid black;
-      }
-    }
-
-    a {
-      color: white;
-      text-shadow: 2px 2px 2px black;
-      text-decoration: none;
-      font-family: "Annie use your telescope";
-      font-size: 2rem;
-      transition: 0.2s ease-in;
-      color: $yellow;
-
-      &:hover {
-        color: $green;
-        margin-left: 10px;
-      }
+    li {
+      border-bottom: 1px solid black;
+      width: 300px;
     }
   }
 
-  .DeletePage {
-    width: 100%;
-    height: fill;
-    padding: 50px;
-    background-color: #3c3c3c;
-  }
-
-  .MonsterPage {
-    background-color: #3c3c3c;
-    height: auto;
-    width: 100%;
+  a {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    text-decoration: none;
     font-family: "Annie use your telescope";
+    font-size: 2rem;
+    transition: 0.2s ease-in;
+    color: $yellow;
 
-    h2 {
-      padding: 10px 0 0 40px;
-      color: rgb(255, 251, 208);
-      font-size: 2.5rem;
-    }
-    ul {
-      margin: 30px;
-      margin-top: 20px;
+    &:hover {
       color: $green;
-      font-weight: bold;
-      list-style: none;
+      margin-left: 10px;
+    }
+  }
+}
 
-      .ul-title {
-        color: rgb(251, 211, 143);
-      }
+.DeletePage {
+  width: 100%;
+  height: fill;
+  padding: 50px;
+  background-color: #3c3c3c;
+}
 
-      li {
-        border-bottom: 1px solid black;
-        padding: 10px;
-        font-size: 1.2rem;
-      }
+.MonsterPage {
+  background-color: #3c3c3c;
+  height: auto;
+  width: 100%;
+  font-family: "Annie use your telescope";
 
-      span {
-        color: $yellow;
-        font-weight: normal;
-      }
+  h2 {
+    padding: 10px 0 0 40px;
+    color: rgb(255, 251, 208);
+    font-size: 2.5rem;
+  }
+  ul {
+    margin: 30px;
+    margin-top: 20px;
+    color: $green;
+    font-weight: bold;
+    list-style: none;
+
+    .ul-title {
+      color: rgb(251, 211, 143);
     }
 
-    .hobbies {
-      list-style: disc;
+    li {
+      border-bottom: 1px solid black;
+      padding: 10px;
+      font-size: 1.2rem;
     }
-    button {
-      background-color: rgb(76, 60, 60);
-      padding: 5px 10px;
-      margin: 0px 30px 30px 30px;
-      color: rgb(207, 207, 207);
-      text-shadow: 2px 2px 2px black;
-      border-radius: 5px;
-      font-family: "Annie use your telescope";
-      font-weight: bold;
-      font-size: 1.3rem;
-      border: 1px solid black;
-      cursor: pointer;
-      box-shadow: 0px 0px 5px black, inset 1px 1px 1px white,
-        inset -1px -1px 2px black;
-      transition: 0.3s ease-out;
 
-      &:hover {
-        background-color: rgb(101, 32, 32);
-      }
+    span {
+      color: $yellow;
+      font-weight: normal;
+    }
+  }
+
+  .hobbies {
+    list-style: disc;
+  }
+  button {
+    background-color: rgb(76, 60, 60);
+    padding: 5px 10px;
+    margin: 0px 30px 30px 30px;
+    color: rgb(207, 207, 207);
+    text-shadow: 2px 2px 2px black;
+    border-radius: 5px;
+    font-family: "Annie use your telescope";
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black, inset 1px 1px 1px white,
+      inset -1px -1px 2px black;
+    transition: 0.3s ease-out;
+
+    &:hover {
+      background-color: rgb(101, 32, 32);
     }
   }
 }
@@ -201,3 +202,8 @@ main {
   top: 0;
   left: 0;
 } */
+
+.StudentRegister {
+  display: flex;
+  width: 100%;
+}

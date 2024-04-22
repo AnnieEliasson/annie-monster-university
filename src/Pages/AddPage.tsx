@@ -232,7 +232,7 @@ const AddPage = () => {
         <label htmlFor="hobby">
           Hobbys: <input type="text" placeholder="Hobby" id="hobby" />
         </label>
-        <Link to={`/${monster.id}`}>
+        <Link to={`/student-register/${monster.id}`}>
           <button onClick={handleClick}>Lägg till student</button>
         </Link>
       </fieldset>

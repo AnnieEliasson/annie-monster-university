@@ -16,19 +16,21 @@ const router = createBrowserRouter([
       {
         path: "/student-register",
         element: <StudentRegister />,
-      },
-      {
-        path: "/:monsterId",
-        element: <MonsterPage />,
-        errorElement: <div>error</div>,
-      },
-      {
-        path: "/delete",
-        element: <div className="DeletePage">Student has been removed</div>,
-      },
-      {
-        path: "/AddPage",
-        element: <AddPage />,
+        children: [
+          {
+            path: "/student-register/:monsterId",
+            element: <MonsterPage />,
+            errorElement: <div>error</div>,
+          },
+          {
+            path: "/student-register/delete",
+            element: <div className="DeletePage">Student has been removed</div>,
+          },
+          {
+            path: "/student-register/AddPage",
+            element: <AddPage />,
+          },
+        ],
       },
     ],
   },

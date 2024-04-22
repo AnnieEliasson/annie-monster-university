@@ -68,7 +68,7 @@ const MonsterPage = () => {
             payload: String(monster[0].id),
           })
         }
-        to={"/delete"}
+        to={"/student-register/delete"}
       >
         <button>Ta bort student</button>
       </Link>

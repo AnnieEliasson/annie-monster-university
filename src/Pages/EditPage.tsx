@@ -230,7 +230,7 @@ const EditPage = ({ editMonster, setEdit }: PropList) => {
           <label htmlFor="hobby">
             Hobbys: <input type="text" placeholder="Hobby" id="hobby" />
           </label>
-          <Link to={`/${monster.id}`}>
+          <Link to={`/student-register/${monster.id}`}>
             <button onClick={handleClick}>Spara ändringar</button>
           </Link>
         </fieldset>
