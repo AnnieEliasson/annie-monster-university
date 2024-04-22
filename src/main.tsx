@@ -6,7 +6,6 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MonsterPage from "./Pages/MonsterPage";
 import MonsterContextProvider from "./Components/ContextProvider/MonsterContextProvider";
 import AddPage from "./Pages/AddPage";
-import EditPage from "./Pages/EditPage";
 import StudentRegister from "./Pages/StudentRegister";
 
 const router = createBrowserRouter([

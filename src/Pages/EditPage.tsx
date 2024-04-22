@@ -3,7 +3,6 @@ import {
   Monster,
   MonsterContext,
 } from "../Components/ContextProvider/MonsterContextProvider";
-import uuid from "react-uuid";
 import { Link } from "react-router-dom";
 
 type PropList = {
