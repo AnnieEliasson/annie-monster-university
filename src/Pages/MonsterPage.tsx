@@ -1,10 +1,11 @@
 import { Link, useParams } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { MonsterContext } from "../Components/ContextProvider/MonsterContextProvider";
+import EditPage from "./EditPage";
 
 const MonsterPage = () => {
   const { state, dispatch } = useContext(MonsterContext);
-  console.log(state);
+  const [edit, setEdit] = useState(false);
 
   const params = useParams();
 
@@ -26,7 +27,7 @@ const MonsterPage = () => {
         </li>
       </ul>
       <ul>
-        Utseende:
+        <span className="ul-title">Utseende:</span>
         <li>
           Antal ögon: <span>{monster[0].appearance.eyes}</span>
         </li>
@@ -44,16 +45,16 @@ const MonsterPage = () => {
           {monster[0].appearance.horn.hasHorn ? (
             <span> {monster[0].appearance.horn.description}</span>
           ) : (
-            <span>"Har inga horn"</span>
+            <span> Har inga horn</span>
           )}
         </li>
       </ul>
 
-      <ul>
-        Hobbies:{" "}
+      <ul className="hobbies">
+        <span className="ul-title">Hobbies: </span>
         {monster[0].hobbies.map((h) => {
           return (
-            <li>
+            <li key={h}>
               <span>{h}</span>
             </li>
           );
@@ -71,6 +72,9 @@ const MonsterPage = () => {
       >
         <button>Ta bort student</button>
       </Link>
+
+      <button onClick={() => setEdit(true)}>Ändra</button>
+      {edit && <EditPage editMonster={monster[0]} setEdit={setEdit} />}
     </div>
   );
 };

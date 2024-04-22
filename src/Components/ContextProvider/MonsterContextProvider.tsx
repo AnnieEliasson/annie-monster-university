@@ -6,8 +6,8 @@ type PropList = {
 };
 const initialMonsters = data;
 
-type Monster = {
-  id: number;
+export type Monster = {
+  id: number | string;
   firstName: string;
   lastNamn: string;
   program: string;
@@ -18,26 +18,45 @@ type Monster = {
     skin: string;
     horn: {
       hasHorn: boolean;
-      description: string;
+      description?: string;
     };
   };
   hobbies: string[];
   homeTown: string;
 };
 
-type Action = {
-  type: "REMOVE";
-  payload: string;
-};
+type Action =
+  | {
+      type: "REMOVE";
+      payload: string;
+    }
+  | { type: "FILTER"; payload: string }
+  | { type: "ADD"; payload: Monster }
+  | { type: "EDIT"; payload: Monster }
+  | { type: "SORT" };
 
 const reducer = (state: Monster[], action: Action) => {
   switch (action.type) {
+    case "ADD":
+      console.log("State: ", action.payload);
+      return [action.payload, ...state];
+
     case "REMOVE":
       console.log("REMOVE", action.payload);
 
       return [...state.filter((m) => String(m.id) !== action.payload)];
 
-      break;
+    case "EDIT":
+      const result = state.filter((x) => x.id !== action.payload.id);
+
+      return [...result, action.payload];
+
+    case "SORT":
+      return [
+        ...state.sort((a, b) =>
+          a.firstName > b.firstName ? 1 : b.firstName > a.firstName ? -1 : 0
+        ),
+      ];
 
     default:
       return state;

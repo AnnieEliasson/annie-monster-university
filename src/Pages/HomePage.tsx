@@ -1,17 +1,27 @@
 import { Link, Outlet } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MonsterContext } from "../Components/ContextProvider/MonsterContextProvider";
 
 const HomePage = () => {
-  const { state } = useContext(MonsterContext);
+  const { state, dispatch } = useContext(MonsterContext);
+
+  const [test, setTest] = useState(state);
+
+  useEffect(() => {
+    setTest(state);
+  }, [state]);
 
   return (
     <div>
       <nav>
         <h1>Monster University</h1>
         <ul>
-          <li>Startsidan</li>
-          <li>Testing</li>
+          <li>
+            <Link to={"/"}>Startsidan</Link>
+          </li>
+          <li>
+            <Link to={"/student-register"}>Student Register</Link>
+          </li>
           <li>Kontakt</li>
         </ul>
       </nav>
@@ -19,12 +29,42 @@ const HomePage = () => {
         <div className="sidebar">
           {
             <ul>
-              <input type="text" placeholder="Sök..." />
+              <Link to={`/AddPage`}>
+                <button>Lägg till student</button>
+              </Link>
+              <br />
+              <input
+                onChange={
+                  (e) => {
+                    setTest(
+                      state.filter(
+                        (x) =>
+                          x.firstName
+                            .toLocaleLowerCase()
+                            .includes(e.target.value) ||
+                          x.lastNamn
+                            .toLocaleLowerCase()
+                            .includes(e.target.value.toLocaleLowerCase())
+                      )
+                    );
+                  }
+                  /* dispatch({ type: "FILTER", payload: e.target.value }) */
+                }
+                type="text"
+                placeholder="Sök..."
+              />
               <button>Filter</button>
-              {state.map((monster) => {
+              <button
+                onClick={() => {
+                  dispatch({ type: "SORT" });
+                }}
+              >
+                sort
+              </button>
+              {test.map((monster) => {
                 return (
-                  <li>
-                    <Link key={monster.id} to={`/${monster.id}`}>
+                  <li key={monster.id}>
+                    <Link to={`/${monster.id}`}>
                       {monster.firstName} {monster.lastNamn}
                     </Link>
                   </li>
