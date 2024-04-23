@@ -38,18 +38,17 @@ type Action =
 const reducer = (state: Monster[], action: Action) => {
   switch (action.type) {
     case "ADD":
-      console.log("State: ", action.payload);
       return [action.payload, ...state];
 
     case "REMOVE":
-      console.log("REMOVE", action.payload);
-
       return [...state.filter((m) => String(m.id) !== action.payload)];
 
     case "EDIT":
-      const result = state.filter((x) => x.id !== action.payload.id);
+      const result = state.filter((x) => x.id === action.payload.id);
 
-      return [...result, action.payload];
+      const index = state.indexOf(result[0]);
+      state.splice(index, 1, action.payload);
+      return [...state];
 
     case "SORT":
       return [

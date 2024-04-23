@@ -1,0 +1,26 @@
+.ShortCut {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(59, 59, 59);
+  border: 0px solid white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black, inset 2px 2px 2px white,
+    inset -2px -2px 5px black;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: rgb(36, 36, 36);
+    scale: 1.05;
+  }
+
+  p {
+    font-weight: 800;
+  }
+  .bigger {
+    font-size: 2rem;
+  }
+}

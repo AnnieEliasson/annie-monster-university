@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { MonsterContext } from "../Components/ContextProvider/MonsterContextProvider";
 
 const StudentRegister = () => {
@@ -50,9 +50,14 @@ const StudentRegister = () => {
             {test.map((monster) => {
               return (
                 <li key={monster.id}>
-                  <Link to={`/student-register/${monster.id}`}>
+                  <NavLink
+                    className={({ isActive, isPending }) =>
+                      isPending ? "pending" : isActive ? "active" : ""
+                    }
+                    to={`/student-register/${monster.id}`}
+                  >
                     {monster.firstName} {monster.lastNamn}
-                  </Link>
+                  </NavLink>
                 </li>
               );
             })}

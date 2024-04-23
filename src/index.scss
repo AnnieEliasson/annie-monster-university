@@ -1,4 +1,6 @@
 @use "./style/colors" as *;
+@import "./Components/InfoCard/InfoCard";
+@import "./Components/ShortCut/ShortCut";
 @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Calligraffitti&family=Caprasimo&family=Goldman:wght@400;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@400;700;900&family=Pavanam&family=Protest+Strike&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&family=Whisper&display=swap");
 * {
   margin: 0;
@@ -32,6 +34,17 @@ nav {
     gap: 30px;
     font-size: 1.5rem;
     list-style: none;
+
+    .nav-link {
+      color: $green;
+      text-decoration: none;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        color: $light-green;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -49,21 +62,31 @@ main {
     li {
       border-bottom: 1px solid black;
       width: 300px;
-    }
-  }
 
-  a {
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    text-decoration: none;
-    font-family: "Annie use your telescope";
-    font-size: 2rem;
-    transition: 0.2s ease-in;
-    color: $yellow;
+      a {
+        color: white;
+        text-shadow: 2px 2px 2px black;
+        text-decoration: none;
+        font-family: "Annie use your telescope";
+        font-size: 2rem;
+        transition: 0.2s ease-in;
+        color: $yellow;
 
-    &:hover {
-      color: $green;
-      margin-left: 10px;
+        &:hover {
+          color: $green;
+          margin-left: 10px;
+        }
+      }
+
+      a.active {
+        color: $green;
+        margin-left: 5px;
+        letter-spacing: 1px;
+      }
+      a:hover {
+        color: $light-green;
+        letter-spacing: 1px;
+      }
     }
   }
 }
@@ -197,13 +220,27 @@ main {
   }
 }
 
-/* .edit {
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
 .StudentRegister {
   display: flex;
   width: 100%;
+}
+
+.Home {
+  background-color: #3c3c3c;
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  padding: 50px 150px;
+  font-family: "Anton";
+
+  .green {
+    color: $green;
+  }
+
+  .yellow {
+    color: $yellow;
+  }
 }

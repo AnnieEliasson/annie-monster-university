@@ -16,7 +16,6 @@ const EditPage = ({ editMonster, setEdit }: PropList) => {
   const [monster, setMonster] = useState<Monster>(editMonster);
 
   const handleClick = () => {
-    console.log(monster);
     dispatch({ type: "EDIT", payload: monster });
     setEdit(false);
   };
@@ -33,6 +32,13 @@ const EditPage = ({ editMonster, setEdit }: PropList) => {
       });
     } else {
       setHasHorn(false);
+      setMonster({
+        ...monster,
+        appearance: {
+          ...monster.appearance,
+          horn: { ...monster.appearance.horn, hasHorn: false, description: "" },
+        },
+      });
     }
   };
 

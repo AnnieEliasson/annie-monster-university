@@ -7,12 +7,17 @@ import MonsterPage from "./Pages/MonsterPage";
 import MonsterContextProvider from "./Components/ContextProvider/MonsterContextProvider";
 import AddPage from "./Pages/AddPage";
 import StudentRegister from "./Pages/StudentRegister";
+import Home from "./Pages/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
     children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
       {
         path: "/student-register",
         element: <StudentRegister />,

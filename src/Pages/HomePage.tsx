@@ -7,10 +7,14 @@ const HomePage = () => {
         <h1>Monster University</h1>
         <ul>
           <li>
-            <Link to={"/"}>Startsidan</Link>
+            <Link className="nav-link" to={"/"}>
+              Startsidan
+            </Link>
           </li>
           <li>
-            <Link to={"/student-register"}>Student Register</Link>
+            <Link className="nav-link" to={"/student-register"}>
+              Student Register
+            </Link>
           </li>
           <li>Kontakt</li>
         </ul>
