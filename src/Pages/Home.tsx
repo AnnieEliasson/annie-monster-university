@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
-import TotalStudents from "../Components/InfoCard/InfoCard";
+import { useContext } from "react";
 import ShortCut from "../Components/ShortCut/ShortCut";
-import { Link } from "react-router-dom";
 import { MonsterContext } from "../Components/ContextProvider/MonsterContextProvider";
 import InfoCard from "../Components/InfoCard/InfoCard";
 
