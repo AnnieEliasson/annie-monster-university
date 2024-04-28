@@ -1,0 +1,16 @@
+.Filter {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input[type="number"] {
+      width: 40px;
+      height: 20px;
+    }
+  }
+}

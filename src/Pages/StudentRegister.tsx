@@ -1,15 +1,33 @@
-import { useContext, useEffect, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { MonsterContext } from "../Components/ContextProvider/MonsterContextProvider";
 
 const StudentRegister = () => {
   const { state, dispatch } = useContext(MonsterContext);
 
-  const [test, setTest] = useState(state);
+  const [monsters, setMonsters] = useState(state);
 
   useEffect(() => {
-    setTest(state);
+    setMonsters(state);
   }, [state]);
+
+  const handleChangeHorn = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.id === "horn" && e.target.checked) {
+      let result = monsters.filter((m) => m.appearance.horn.hasHorn);
+      setMonsters(result);
+    } else if (e.target.id === "noHorn" && e.target.checked) {
+      let result = monsters.filter((m) => !m.appearance.horn.hasHorn);
+      setMonsters(result);
+    } else {
+      setMonsters(state);
+    }
+  };
+
+  const handleClickFilter = () => {
+    const filter = document.querySelector(".filter") as HTMLElement;
+    filter.classList.toggle("show");
+  };
+
   return (
     <div className="StudentRegister">
       <div className="sidebar">
@@ -20,26 +38,23 @@ const StudentRegister = () => {
             </Link>
             <br />
             <input
-              onChange={
-                (e) => {
-                  setTest(
-                    state.filter(
-                      (x) =>
-                        x.firstName
-                          .toLocaleLowerCase()
-                          .includes(e.target.value) ||
-                        x.lastNamn
-                          .toLocaleLowerCase()
-                          .includes(e.target.value.toLocaleLowerCase())
-                    )
-                  );
-                }
-                /* dispatch({ type: "FILTER", payload: e.target.value }) */
-              }
+              onChange={(e) => {
+                setMonsters(
+                  state.filter(
+                    (x) =>
+                      x.firstName
+                        .toLocaleLowerCase()
+                        .includes(e.target.value) ||
+                      x.lastNamn
+                        .toLocaleLowerCase()
+                        .includes(e.target.value.toLocaleLowerCase())
+                  )
+                );
+              }}
               type="text"
               placeholder="Sök..."
             />
-            <button>Filter</button>
+            <button onClick={handleClickFilter}>Filter</button>
             <button
               onClick={() => {
                 dispatch({ type: "SORT" });
@@ -47,7 +62,32 @@ const StudentRegister = () => {
             >
               sort
             </button>
-            {test.map((monster) => {
+            <div className="filter">
+              <label htmlFor="horn">
+                Har horn{" "}
+                <input
+                  onChange={(e) => {
+                    handleChangeHorn(e);
+                  }}
+                  type="checkbox"
+                  name="horn"
+                  id="horn"
+                />
+              </label>
+              <label htmlFor="noHorn">
+                Har inte horn{" "}
+                <input
+                  onChange={(e) => {
+                    handleChangeHorn(e);
+                  }}
+                  type="checkbox"
+                  name="noHorn"
+                  id="noHorn"
+                />
+              </label>
+            </div>
+
+            {monsters.map((monster) => {
               return (
                 <li key={monster.id}>
                   <NavLink

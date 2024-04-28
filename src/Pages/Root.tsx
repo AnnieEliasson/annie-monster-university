@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
-const HomePage = () => {
+const Root = () => {
   return (
     <div>
       <nav>
@@ -26,4 +26,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Root;

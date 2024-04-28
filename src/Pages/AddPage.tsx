@@ -1,10 +1,8 @@
 import React, { useContext, useState } from "react";
-import {
-  Monster,
-  MonsterContext,
-} from "../Components/ContextProvider/MonsterContextProvider";
+import { MonsterContext } from "../Components/ContextProvider/MonsterContextProvider";
 import uuid from "react-uuid";
 import { Link } from "react-router-dom";
+import { Monster } from "../Types/Types";
 
 const AddPage = () => {
   const { dispatch } = useContext(MonsterContext);
@@ -33,7 +31,7 @@ const AddPage = () => {
     dispatch({ type: "ADD", payload: monster });
   };
 
-  const handleOnChangeHorns = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeHorns = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.id === "ja") {
       setHasHorn(true);
       setMonster({
@@ -190,14 +188,14 @@ const AddPage = () => {
           <div className="radios" id="radios">
             <label htmlFor="ja">Ja</label>
             <input
-              onChange={(e) => handleOnChangeHorns(e)}
+              onChange={(e) => handleChangeHorns(e)}
               type="radio"
               name="horn"
               id="ja"
             />
             <label htmlFor="nej">Nej</label>
             <input
-              onChange={(e) => handleOnChangeHorns(e)}
+              onChange={(e) => handleChangeHorns(e)}
               type="radio"
               name="horn"
               id="nej"

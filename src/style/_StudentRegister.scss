@@ -1,0 +1,48 @@
+.sidebar {
+  width: fit-content;
+  padding: 20px;
+  border: 0px solid black;
+
+  .filter {
+    display: none;
+    flex-direction: column;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      border-bottom: 1px solid black;
+      width: 300px;
+
+      a {
+        color: white;
+        text-shadow: 2px 2px 2px black;
+        text-decoration: none;
+        font-family: "Annie use your telescope";
+        font-size: 2rem;
+        transition: 0.2s ease-in;
+        color: $yellow;
+
+        &:hover {
+          color: $green;
+          margin-left: 10px;
+        }
+      }
+
+      a.active {
+        color: $green;
+        margin-left: 5px;
+        letter-spacing: 1px;
+      }
+      a:hover {
+        color: $light-green;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

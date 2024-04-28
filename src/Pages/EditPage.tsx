@@ -1,9 +1,7 @@
 import React, { useContext, useState } from "react";
-import {
-  Monster,
-  MonsterContext,
-} from "../Components/ContextProvider/MonsterContextProvider";
+import { MonsterContext } from "../Components/ContextProvider/MonsterContextProvider";
 import { Link } from "react-router-dom";
+import { Monster } from "../Types/Types";
 
 type PropList = {
   editMonster: Monster;

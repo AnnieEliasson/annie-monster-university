@@ -1,4 +1,7 @@
 @use "./style/colors" as *;
+@import "./style/Filter";
+@import "./style/StudentRegister";
+@import "./style/Root";
 @import "./Components/InfoCard/InfoCard";
 @import "./Components/ShortCut/ShortCut";
 @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Calligraffitti&family=Caprasimo&family=Goldman:wght@400;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@400;700;900&family=Pavanam&family=Protest+Strike&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&family=Whisper&display=swap");
@@ -14,81 +17,6 @@ body {
   text-shadow: 2px 2px 2px black;
   font-family: "Annie use your telescope";
   font-size: 1.3rem;
-}
-
-nav {
-  padding: 20px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid black;
-  font-family: "Satisfy";
-  color: $green;
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  ul {
-    display: flex;
-    gap: 30px;
-    font-size: 1.5rem;
-    list-style: none;
-
-    .nav-link {
-      color: $green;
-      text-decoration: none;
-      transition: all 0.3s ease-in;
-
-      &:hover {
-        color: $light-green;
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-main {
-  display: flex;
-}
-.sidebar {
-  width: fit-content;
-  padding: 20px;
-  border: 0px solid black;
-
-  ul {
-    list-style: none;
-
-    li {
-      border-bottom: 1px solid black;
-      width: 300px;
-
-      a {
-        color: white;
-        text-shadow: 2px 2px 2px black;
-        text-decoration: none;
-        font-family: "Annie use your telescope";
-        font-size: 2rem;
-        transition: 0.2s ease-in;
-        color: $yellow;
-
-        &:hover {
-          color: $green;
-          margin-left: 10px;
-        }
-      }
-
-      a.active {
-        color: $green;
-        margin-left: 5px;
-        letter-spacing: 1px;
-      }
-      a:hover {
-        color: $light-green;
-        letter-spacing: 1px;
-      }
-    }
-  }
 }
 
 .DeletePage {
